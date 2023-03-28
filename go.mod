@@ -14,3 +14,5 @@ require (
 	golang.org/x/exp v0.0.0-20200908183739-ae8ad444f925 // indirect
 	golang.org/x/net v0.0.0-20190620200207-3b0461eec859
 )
+
+replace github.com/blushft/go-diagrams => github.com/gmohlamo/go-diagrams gmohlamo
