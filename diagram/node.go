@@ -1,6 +1,7 @@
 package diagram
 
 import (
+	"io"
 	"io/ioutil"
 	"os"
 	"path/filepath"
@@ -45,7 +46,15 @@ func (n *Node) render(parent string, path string, graph *graphviz.Escape) error 
 	if n.Options.Image != "" {
 		img, err := assets.ReadFile(n.Options.Image)
 		if err != nil {
-			return err
+			//find local file
+			file, err2 := os.Open(path)
+			if err2 != nil {
+				return err
+			}
+			img, err = io.ReadAll(file)
+			if err != nil {
+				return err
+			}
 		}
 
 		outDir := filepath.Join(path, filepath.Dir(n.Options.Image))
