@@ -47,7 +47,7 @@ func (n *Node) render(parent string, path string, graph *graphviz.Escape) error 
 		img, err := assets.ReadFile(n.Options.Image)
 		if err != nil {
 			//find local file
-			file, err2 := os.Open(path)
+			file, err2 := os.Open(n.Options.Image)
 			if err2 != nil {
 				return err
 			}
