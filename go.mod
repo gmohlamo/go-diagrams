@@ -12,4 +12,4 @@ require (
 	golang.org/x/net v0.0.0-20190620200207-3b0461eec859
 )
 
-replace github.com/blushft/go-diagrams => github.com/gmohlamo/go-diagrams v0.0.0-20230328183251-e828e5c354dd
+replace github.com/blushft/go-diagrams => github.com/gmohlamo/go-diagrams v0.0.0-20201006005127-c78c821223d9
